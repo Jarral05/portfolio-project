@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import { router } from "./routes/user.route.js";
 import { routerProducts } from "./routes/products.route.js";
 import { cartRoute } from "./routes/cart.route.js";
+import { orderRoute } from "./routes/order.route.js";
 import dotenv from "dotenv";
 
 const app = express();
@@ -22,6 +23,9 @@ app.use("/api", routerProducts);
 
 // Route for cart
 app.use("/api", cartRoute);
+
+// Route for order
+app.use("/api", orderRoute);
 
 // For connecting Database
 
